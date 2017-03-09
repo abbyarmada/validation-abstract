@@ -4,4 +4,4 @@
 [![Test Coverage](https://codeclimate.com/github/Dhii/validator-abstract/badges/coverage.svg)](https://codeclimate.com/github/Dhii/validator-abstract/coverage)
 [![Latest Stable Version](https://poser.pugx.org/dhii/validator-abstract/version)](https://packagist.org/packages/dhii/validator-abstract)
 
-Common
+Common abstract functionality for validation.
