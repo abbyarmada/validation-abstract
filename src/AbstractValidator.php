@@ -9,14 +9,14 @@ use Dhii\Validation\Exception\ValidationFailedExceptionInterface;
 /**
  * Common functionality for validators.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 abstract class AbstractValidator
 {
     /**
      * Creates a new validation exception.
      *
-     * @since [*next-version*]
+     * @since 0.1
      * @see \Exception::__construct()
      *
      * @param string     $message
@@ -30,7 +30,7 @@ abstract class AbstractValidator
     /**
      * Creates a new validation failed exception.
      *
-     * @since [*next-version*]
+     * @since 0.1
      * @see \Exception::__construct()
      *
      * @param string                                     $message
@@ -45,7 +45,7 @@ abstract class AbstractValidator
     /**
      * Validates a subject.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @param mixed $subject The value to validate.
      *
@@ -56,7 +56,7 @@ abstract class AbstractValidator
     /**
      * Determines whether the subject is valid.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @param mixed $subject The value to validate.
      *

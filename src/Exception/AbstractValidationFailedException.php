@@ -7,14 +7,14 @@ use Traversable;
 /**
  * Common functionality for validation exceptions.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 abstract class AbstractValidationFailedException extends AbstractValidationException
 {
     /**
      * The list of validation errors associated with this instance.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @var array|Traversable
      */
@@ -23,7 +23,7 @@ abstract class AbstractValidationFailedException extends AbstractValidationExcep
     /**
      * The subject of validation associated with this instance.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @var mixed
      */
@@ -32,7 +32,7 @@ abstract class AbstractValidationFailedException extends AbstractValidationExcep
     /**
      * Retrieve the list of validation errors that this instance represents.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @return array|Traversable The error list.
      */
@@ -48,7 +48,7 @@ abstract class AbstractValidationFailedException extends AbstractValidationExcep
     /**
      * Sets the list of validation errors that this instance should represent.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @param array|Traversable $errorList The list of errors.
      *
@@ -79,7 +79,7 @@ abstract class AbstractValidationFailedException extends AbstractValidationExcep
     /**
      * Retrieves the invalid subject associated with this instance.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @return mixed The subject.
      */
@@ -91,7 +91,7 @@ abstract class AbstractValidationFailedException extends AbstractValidationExcep
     /**
      * Throws an exception if the given list is invalid.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @param Traversable $list
      *
@@ -111,7 +111,7 @@ abstract class AbstractValidationFailedException extends AbstractValidationExcep
     /**
      * Creates a new instance of a validation exception.
      *
-     * @since [*next-version*]
+     * @since 0.1
      * @see \Exception::__construct()
      *
      * @param string     $message
@@ -125,7 +125,7 @@ abstract class AbstractValidationFailedException extends AbstractValidationExcep
     /**
      * Determines if the given list is valid.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @param array|Traversable $list The list to validate.
      *

@@ -7,21 +7,21 @@ use Xpmock\TestCase;
 /**
  * Tests {@see Dhii\Validation\Exception\AbstractValidationException}.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 class AbstractValidationExceptionTest extends TestCase
 {
     /**
      * The class name of the test subject.
      *
-     * @since [*next-version*]
+     * @since 0.1
      */
     const TEST_SUBJECT_CLASSNAME = 'Dhii\\Validation\\Exception\\AbstractValidationException';
 
     /**
      * Creates a new instance of the test subject.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @return AbstractValidationException
      */
@@ -37,7 +37,7 @@ class AbstractValidationExceptionTest extends TestCase
     /**
      * Tests whether a valid instance of the test subject can be created.
      *
-     * @since [*next-version*]
+     * @since 0.1
      */
     public function testCanBeCreated()
     {
