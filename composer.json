@@ -24,5 +24,10 @@
         "psr-4": {
             "Dhii\\Validation\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dhii\\Validation\\TestStub\\": "test/stub/"
+        }
     }
 }
