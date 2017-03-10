@@ -38,6 +38,8 @@ class AbstractValidatorTest extends TestCase
                     if ($subject !== true) {
                         return array('Subject must be a boolean `true` value');
                     }
+
+                    return array();
                 })
                 ->new();
 
