@@ -30,13 +30,15 @@ class AbstractValidatorTest extends TestCase
     {
         $me = $this;
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-                ->_validate(function ($value) use (&$me) {
-                    if ($value !== true) {
-                        throw $me->createValidationFailedException();
+                ->_createValidationException()
+                ->_createValidationFailedException(function ($message) use (&$me) {
+                    return $me->createValidationFailedException($message);
+                })
+                ->_getValidationErrors(function($subject) {
+                    if ($subject !== true) {
+                        return array('Subject must be a boolean `true` value');
                     }
                 })
-                ->_createValidationException()
-                ->_createValidationFailedException()
                 ->new();
 
         return $mock;
@@ -49,12 +51,12 @@ class AbstractValidatorTest extends TestCase
      *
      * @return ValidationFailedExceptionInterface
      */
-    public function createValidationFailedException()
+    public function createValidationFailedException($message)
     {
         $mock = $this->mock('Dhii\\Validation\\TestStub\\AbstractValidationFailedException')
                 ->getValidationErrors()
                 ->getSubject()
-                ->new();
+                ->new($message);
 
         return $mock;
     }
