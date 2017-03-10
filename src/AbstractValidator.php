@@ -3,6 +3,7 @@
 namespace Dhii\Validation;
 
 use Traversable;
+use Countable;
 use Dhii\Validation\Exception\ValidationExceptionInterface;
 use Dhii\Validation\Exception\ValidationFailedExceptionInterface;
 
@@ -51,7 +52,27 @@ abstract class AbstractValidator
      *
      * @throw ValidationFailedExceptionInterface If subject is invalid.
      */
-    abstract protected function _validate($subject);
+    protected function _validate($subject)
+    {
+        $errors = $this->_getValidationErrors($subject);
+        if (!count($errors)) {
+            return;
+        }
+
+        throw $this->_createValidationFailedException('Validation failed', 0, null, $errors);
+    }
+
+    /**
+     * Retrieve a list of reasons that make the subject invalid.
+     *
+     * An empty list means that the subject is valid.
+     * This is what actually performs the validation.
+     *
+     * @since [*next-version*]
+     *
+     * @return Countable|Traversable The list of validation errors.
+     */
+    abstract protected function _getValidationErrors($subject);
 
     /**
      * Determines whether the subject is valid.
