@@ -50,7 +50,7 @@ abstract class AbstractValidator
      *
      * @param mixed $subject The value to validate.
      *
-     * @throw ValidationFailedExceptionInterface If subject is invalid.
+     * @throws ValidationFailedExceptionInterface If subject is invalid.
      */
     protected function _validate($subject)
     {
