@@ -29,5 +29,8 @@
         "psr-4": {
             "Dhii\\Validation\\TestStub\\": "test/stub/"
         }
+    },
+    "suggest": {
+        "dhii/validation-interface": "Needed to be able to create exceptions that are expected to be thrown"
     }
 }
